@@ -6,6 +6,7 @@
   --text-main: #f8fafc;
   --text-muted: #94a3b8;
   --border-color: #334155;
+  --danger-color: #f87171;
 }
 
 body {
@@ -67,6 +68,41 @@ body {
   margin: 0;
 }
 
+.add-form {
+  background-color: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  margin-bottom: 2.5rem;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.add-form input, .add-form select {
+  background-color: #0f172a;
+  border: 1px solid var(--border-color);
+  color: var(--text-main);
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+  flex: 1;
+  min-width: 150px;
+}
+
+.btn-primary {
+  background-color: var(--accent-color);
+  color: #0f172a;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+}
+
 .subscriptions-table {
   width: 100%;
   border-collapse: collapse;
@@ -98,6 +134,7 @@ body {
   padding: 0.2rem 0.6rem;
   border-radius: 6px;
   font-size: 0.8rem;
+  margin-right: 0.5rem;
 }
 
 .status-tag.active {
@@ -108,4 +145,29 @@ body {
 .status-tag.paused {
   background-color: rgba(148, 163, 184, 0.15);
   color: var(--text-muted);
+}
+
+.btn-action {
+  background: transparent;
+  border: 1px solid var(--border-color);
+  color: var(--text-main);
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  margin-right: 0.4rem;
+}
+
+.btn-action:hover {
+  border-color: var(--accent-color);
+}
+
+.btn-danger {
+  color: var(--danger-color);
+  border-color: rgba(248, 113, 113, 0.3);
+}
+
+.btn-danger:hover {
+  border-color: var(--danger-color);
+  background-color: rgba(248, 113, 113, 0.1);
 }
